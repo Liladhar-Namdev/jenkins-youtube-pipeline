@@ -10,36 +10,14 @@ date'''
     }
 
     stage('test') {
-      parallel {
-        stage('test') {
-          steps {
-            echo 'test new'
-          }
-        }
-
-        stage('test par') {
-          steps {
-            echo 'test par'
-          }
-        }
-
+      steps {
+        echo 'test new'
       }
     }
 
-    stage('deploy') {
-      parallel {
-        stage('deploy') {
-          steps {
-            echo 'deploy'
-          }
-        }
-
-        stage('add') {
-          steps {
-            sleep 30
-          }
-        }
-
+    stage('add') {
+      steps {
+        sleep 30
       }
     }
 
