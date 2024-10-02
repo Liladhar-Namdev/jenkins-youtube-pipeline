@@ -15,11 +15,5 @@ date'''
       }
     }
 
-    stage('add') {
-      steps {
-        sleep 30
-      }
-    }
-
   }
 }
