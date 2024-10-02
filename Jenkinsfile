@@ -2,10 +2,21 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        sh '''pwd
+      parallel {
+        stage('Build') {
+          steps {
+            sh '''pwd
 ls
 date'''
+          }
+        }
+
+        stage('build1') {
+          steps {
+            echo 'yes'
+          }
+        }
+
       }
     }
 
